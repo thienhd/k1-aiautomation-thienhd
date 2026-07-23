@@ -13,10 +13,26 @@ Repo này dùng để lưu bài thực hành, tùy biến và nộp bài — **k
 
 ## Mô hình 2 repo — LUÔN nhớ điều này
 
-| Repo | Vai trò | Vị trí đề xuất |
+| Repo | Vai trò | Vị trí |
 | --- | --- | --- |
-| `hocvien_k1_aiautomation` | Repo học chung của Alobase, **chỉ đọc**. Chứa Student Kit (slide, lab.md, prompts, templates, schema) theo từng buổi. | `C:\Users\thienhd\source\K1-AI-Automation\hocvien_k1_aiautomation` (clone khi có link chính thức) |
-| `k1-aiautomation-thienhd` | Repo cá nhân **(chính là repo này)**, nơi duy nhất để ghi, commit, push bài làm. | thư mục hiện tại |
+| `hocvien_k1_aiautomation` | Repo học chung của Alobase, **chỉ đọc**. Chứa Student Kit (slide, lab.md, prompts, templates, schema) theo từng buổi. | ✅ Đã clone tại `C:\HoyaOneDrive\HOYA Corporation\HOMT IT - Documents\Developer Technology\Apply AI Into Works\FDE-Forward Deploy Engineer\K1-AI-Automation\hocvien_k1_aiautomation` (trong OneDrive để tự sync/xem lại) — trước mỗi buổi chạy `git pull` để cập nhật, KHÔNG commit gì vào đây. |
+| `k1-aiautomation-thienhd` | Repo cá nhân **(chính là repo này)**, nơi duy nhất để ghi, commit, push bài làm. | ✅ Đã push public: <https://github.com/thienhd/k1-aiautomation-thienhd> |
+
+**Tên buổi thật (theo repo học chung, khác với tên "buoi-NN" chung chung ban đầu):**
+
+| # | Thư mục repo học chung | Chủ đề |
+| --- | --- | --- |
+| 00 | `00-khai-giang` | Khai giảng — cách học, cách nộp bài (= cẩm nang) |
+| 01 | `01-onboarding-automation` | Cài đặt Hybrid AI Agents (Antigravity/Codex/Claude Code), Nhân sự số, Skill `.md` |
+| 02 | `02-advanced-automation` | Automation nâng cao |
+| 03 | `03-hr-screening` | Sàng lọc CV ứng viên |
+| 04 | `04-contract-review` | Rà soát hợp đồng |
+| 05 | `05-cskh-bot` | Chatbot chăm sóc khách hàng |
+| 06 | `06-content-engine` | Engine sản xuất nội dung |
+| 07 | `07-ai-video` | Sản xuất video AI |
+| 08 | `08-capstone` | Đồ án tốt nghiệp (Capstone) |
+
+Chi tiết đề bài từng buổi: mở `hocvien_k1_aiautomation/<NN-ten-buoi>/lab.md`.
 
 **Quy tắc bất di bất dịch:**
 - KHÔNG BAO GIỜ thực hành hoặc commit trực tiếp vào repo học chung.
@@ -43,12 +59,15 @@ Dùng [`_template-buoi/`](_template-buoi) làm khung mẫu khi bắt đầu mộ
 | Công cụ | Vai trò trong khóa | Trạng thái |
 | --- | --- | --- |
 | Git 2.45 | Lưu lịch sử sản phẩm, push bài | ✅ Đã cài, identity: Thien Ha Duy |
+| GitHub CLI (`gh`) 2.96 | Tạo/push repo | ✅ Đã cài (user scope), đã `gh auth login` thành công (account `thienhd`) |
 | Antigravity IDE | Workspace chính để code | ✅ Đã cài |
-| Cline (extension) | Coding Agent chạy trong Antigravity | ⬜ Cần cài trong Antigravity (`Ctrl+Shift+X` → tìm "Cline") |
+| Claude Code CLI 2.1.196 | 1 trong 3 Hybrid AI Agent bắt buộc của Buổi 01 | ✅ Đã cài, đang dùng để làm bài |
+| Codex CLI | 1 trong 3 Hybrid AI Agent (tùy chọn, cần nếu muốn đủ 3/3 cho BTVN buổi 01) | ❌ Chưa cài |
+| Cline (extension trong Antigravity) | Coding Agent chạy trong Antigravity | ✅ Đã cài (publisher `saoudrizwan`, ~5.3M lượt cài) |
 | GLM qua Z.AI (OpenAI Compatible) | Model đứng sau Cline | ⬜ Cần API key từ giảng viên |
 | n8n | Workflow automation | ⬜ Chưa chọn phương án (Cloud / VPS / Docker local) |
 | Gemini API (Google AI Studio) | Model cho các lab AI | ⬜ Cần bật Paid Tier + nạp ~10 USD |
-| GitHub CLI (`gh`) | Push/tạo repo nhanh hơn | ❌ Chưa cài — cân nhắc `winget install --id GitHub.cli` |
+| Markdown Viewer extension | Xem file Skill `.md` (yêu cầu Buổi 01) | ⬜ Cần cài trong Antigravity |
 | Docker | Chạy n8n local | ❌ Chưa cài — chỉ cần nếu chọn phương án Docker local |
 
 Chi tiết setup từng bước: xem [SETUP_CHECKLIST.md](SETUP_CHECKLIST.md).
